@@ -6,4 +6,8 @@ class Movie < ActiveRecord::Base
       false
     end
   end
+
+  def self.released
+    where('released_on <= ?', Time.now).order('released_on desc')
+  end
 end

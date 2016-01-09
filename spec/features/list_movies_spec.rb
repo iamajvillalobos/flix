@@ -18,10 +18,10 @@ describe "Viewing the list of movies" do
                           total_gross: 403706375.00,
                           description: "Peter Parker gets bit by a genetically modified spider",
                           released_on: "2002-05-03")
-    
+
     visit movies_url
 
-    expect(page).to have_text("3 Movies")
+    expect(page).to have_text("#{Movie.count} Movies")
     expect(page).to have_text(movie1.title)
     expect(page).to have_text(movie2.title)
     expect(page).to have_text(movie3.title)
@@ -29,5 +29,14 @@ describe "Viewing the list of movies" do
     expect(page).to have_text(movie1.rating)
     expect(page).to have_text(movie1.description[0..9])
     expect(page).to have_text("$318,412,101.00")
+  end
+
+  it "does not show a movie that hasn't yet been released" do
+    movie1 = Movie.create(movie_attributes(released_on: 1.month.from_now))
+
+    visit movies_url
+
+    expect(page).to_not have_text(movie1.title)
+
   end
 end

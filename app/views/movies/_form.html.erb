@@ -19,6 +19,22 @@
     <%= f.label :released_on %><br />
     <%= f.date_field :released_on %>
   </div>
+  <div>
+    <%= f.label :cast %><br />
+    <%= f.text_field :cast %>
+  </div>
+  <div>
+    <%= f.label :director %><br />
+    <%= f.text_field :director %>
+  </div>
+  <div>
+    <%= f.label :duration %><br />
+   <%= f.text_field :duration, size: 10 %>
+  </div>
+  <div>
+    <%= f.label :image_file_name %><br />
+    <%= f.text_field :image_file_name %>
+  </div>
 
   <%= f.submit %> | <%= link_to "Cancel", movies_path %>
 <% end %>
