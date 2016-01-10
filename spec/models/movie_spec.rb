@@ -60,21 +60,21 @@ describe "A movie" do
   end
 
   it "accepts a $0 total gross" do
-    movie = Movie.new(price: 0)
+    movie = Movie.new(total_gross: 0)
     movie.valid?
-    expect(movie.errors[:price].any?).to eq(false)
+    expect(movie.errors[:total_gross].any?).to eq(false)
   end
 
   it "accepts a positive total gross" do
-    movie = Movie.new(price: 1000000000.0)
+    movie = Movie.new(total_gross: 1000000000.0)
     movie.valid?
-    expect(movie.errors[:price].any?).to eq(false)
+    expect(movie.errors[:total_gross].any?).to eq(false)
   end
 
   it "rejects a negative total gross" do
-    movie = Movie.new(price: -1000000000.0)
+    movie = Movie.new(total_gross: -1000.0)
     movie.valid?
-    expect(movie.errors[:price].any?).to eq(true)
+    expect(movie.errors[:total_gross].any?).to eq(true)
   end
 
   it "accepts a properly formatted image file names" do
@@ -116,6 +116,6 @@ describe "A movie" do
   it "is valid with example attributes" do
     movie = Movie.new(movie_attributes)
     movie.valid?
-    expect(movie.errors.any?).to eq()
+    expect(movie.errors.any?).to eq(false)
   end
 end

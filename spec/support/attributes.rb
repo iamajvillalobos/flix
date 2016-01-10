@@ -1,14 +1,19 @@
 def movie_attributes(overrides = {})
   {
-    title: "Iron Man",
-    rating: "PG-13",
-    total_gross: 318412101.00,
-    description: "Tony Stark builds an armored suit to fight the throes of evil",
+    title: 'Iron Man',
+    description:
+    %{
+      When wealthy industrialist Tony Stark is forced to build an
+      armored suit after a life-threatening incident, he ultimately
+      decides to use its technology to fight against evil.
+    }.squish,
+    image_file_name: 'ironman.jpg',
+    cast: 'Robert Downey Jr., Gwyneth Paltrow and Terrence Howard',
     released_on: "2008-05-02",
-    cast: "Robert Downey Jr., Gwyneth Paltrow and Terrence Howard",
-    director: "Jon Favreau",
-    duration: "126 min",
-    image_file_name: "ironman.jpg"
-  }.merge(overrides)
+    duration: '126 min',
+    director: 'Jon Favreau',
+    rating: 'PG-13',
+    total_gross: 318_412_101
+    }.merge(overrides)
 end
 
