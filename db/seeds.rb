@@ -107,5 +107,20 @@ Movie.create!([
 
 Review.delete_all
 Review.create!([
-
+  {
+      name: "Roger Ebert",
+      stars: 3,
+      comment: "I laughed, I cried, I spilled my popcorn!",
+      city: "New York",
+      state: "New York",
+      movie: Movie.first
+  },
+  {
+    name: "Gene Siskel",
+    stars: 5,
+    comment: "I'm a better reviewer than he is.",
+    city: "Los Angeles",
+    state: "California",
+    movie: Movie.first
+  }
 ])
