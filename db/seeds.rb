@@ -104,3 +104,8 @@ Movie.create!([
     total_gross: 387_623_910
   }
 ])
+
+Review.delete_all
+Review.create!([
+
+])
