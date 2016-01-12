@@ -9,7 +9,7 @@ describe "Creating a review" do
     expect(current_path).to eq(new_movie_review_path(movie))
 
     fill_in "Name", with: "Rogert Ebert"
-    select 3, from: "review_stars"
+    choose "review_stars_3"
     fill_in "Comment", with: "I laughed, I cried, I spilled my popcorn"
 
     click_button "Post Review"
