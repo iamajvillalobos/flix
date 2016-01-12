@@ -4,9 +4,7 @@ describe "Creating a review" do
 
     visit movie_url(movie)
 
-    click_link 'Write Review'
-
-    expect(current_path).to eq(new_movie_review_path(movie))
+    expect(current_path).to eq(movie_path(movie))
 
     fill_in "Name", with: "Rogert Ebert"
     choose "review_stars_3"
