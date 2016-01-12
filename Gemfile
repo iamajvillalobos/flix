@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sprockets-rails', '2.3.3'
+gem 'rails_12factor'
+
 
 group :development, :test do
   gem 'byebug'
@@ -28,5 +30,4 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
 end
