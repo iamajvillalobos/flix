@@ -48,6 +48,12 @@ describe "A user" do
     expect(user.errors[:password].any?).to eq(true)
   end
 
+  it "requires a password of atleast 10 characters" do
+    user = User.new(password: "secretsecret")
+    user.valid?
+    expect(user.errors[:password].any?).to eq(false)
+  end
+
   it "requires a password confirmation when password is present" do
     user = User.new(password: "secret", password_confirmation: "")
     user.valid?
