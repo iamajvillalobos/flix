@@ -2,6 +2,7 @@
   <header>
     <h1><%= @user.name %></h1>
     <h2><%= @user.email %></h2>
+    <h2>Member Since: <%= format_member_since(@user) %></h2>
   </header>
 </article>
 
