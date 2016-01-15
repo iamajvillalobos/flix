@@ -124,3 +124,17 @@ Review.create!([
     movie: Movie.first
   }
 ])
+
+User.delete_all
+User.create!([
+  {
+    name: "Monica",
+    email: "monica@example.com",
+    password: "secretsecret",
+    password_confirmation: "secretsecret"
+  },
+  name: "Samantha",
+  email: "samantha@example.com",
+  password: "secretsecret",
+  password_confirmation: "secretsecret"
+])
