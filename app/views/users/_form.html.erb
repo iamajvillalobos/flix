@@ -20,7 +20,11 @@
       </li>
     </ol>
     <p>
-      <%= f.submit %>
+      <% if @user.new_record? %>
+        <%= f.submit "Create Account" %>
+      <% else %>
+        <%= f.submit "Update Account" %>
+      <% end %>
       <%= link_to "Cancel", users_path, class: 'button' %>
     </p>
   </fieldset>
