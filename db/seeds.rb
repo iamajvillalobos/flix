@@ -133,8 +133,10 @@ User.create!([
     password: "secretsecret",
     password_confirmation: "secretsecret"
   },
-  name: "Samantha",
-  email: "samantha@example.com",
-  password: "secretsecret",
-  password_confirmation: "secretsecret"
+  {
+    name: "Samantha",
+    email: "samantha@example.com",
+    password: "secretsecret",
+    password_confirmation: "secretsecret"
+  }
 ])
