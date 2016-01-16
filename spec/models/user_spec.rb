@@ -1,4 +1,5 @@
 describe "A user" do
+
   it "requires a name" do
     user = User.new(name: "")
     user.valid?
@@ -74,5 +75,29 @@ describe "A user" do
   it "automatically encrypts the password into the password_digest attribute" do
     user = User.new(password: "secret")
     expect(user.password_digest.present?).to eq(true)
+  end
+
+  it "requires a username" do
+    user = User.new(username: "")
+    user.valid?
+    expect(user.errors[:username].any?).to eq(true)
+  end
+
+  it "accepts properply formatted username" do
+    usernames = %w[seniorbrusko christa1125 1punchman]
+    usernames.each do |username|
+      user = User.new(username: username)
+      user.valid?
+      expect(user.errors[:username].any?).to eq(false)
+    end
+  end
+
+  it "rejects invalid formatted username" do
+    usernames = ["user name123", "use%923$"]
+    usernames.each do |username|
+      user = User.new(username: username)
+      user.valid?
+      expect(user.errors[:username].any?).to eq(true)
+    end
   end
 end
