@@ -6,7 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Movie.delete_all
 Movie.create!([
   {
     title: 'Iron Man',
@@ -105,7 +104,6 @@ Movie.create!([
   }
 ])
 
-Review.delete_all
 Review.create!([
   {
       name: "Roger Ebert",
@@ -125,7 +123,6 @@ Review.create!([
   }
 ])
 
-User.delete_all
 User.create!([
   {
     name: "Monica",
