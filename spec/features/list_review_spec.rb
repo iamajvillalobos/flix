@@ -5,7 +5,6 @@ describe "Viewing a list of reviews" do
     review1 = movie1.reviews.create(review_attributes(name: "Roger Ebert"))
     review2 = movie1.reviews.create(review_attributes(name: "Gene Siskel"))
 
-
     movie2 = Movie.create(movie_attributes(title: "Superman"))
     review3 = movie2.reviews.create(review_attributes(name: "Peter Travers"))
 

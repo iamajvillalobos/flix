@@ -1,4 +1,4 @@
-describe "A review" do
+ describe "A review" do
 
   it "belongs to a movie" do
     movie = Movie.create(movie_attributes)
