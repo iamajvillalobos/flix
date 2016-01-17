@@ -13,8 +13,6 @@ engines:
     config:
       languages:
       - ruby
-  eslint:
-    enabled: true
   fixme:
     enabled: true
   rubocop:
