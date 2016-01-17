@@ -4,10 +4,6 @@ engines:
     enabled: true
   bundler-audit:
     enabled: true
-  csslint:
-    enabled: true
-  coffeelint:
-    enabled: true
   duplication:
     enabled: true
     config:
@@ -23,9 +19,6 @@ ratings:
   - "**.erb"
   - "**.haml"
   - "**.rb"
-  - "**.css"
-  - "**.coffee"
-  - "**.inc"
 exclude_paths:
 - config/**/*
 - db/**/*
