@@ -967,6 +967,29 @@
         null,
         null
       ],
+      "/Users/armanjonvillalobos/Projects/rails_studio/flix/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        9,
+        8,
+        8,
+        8,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/armanjonvillalobos/Projects/rails_studio/flix/app/controllers/movies_controller.rb": [
         1,
         1,
@@ -1053,29 +1076,6 @@
         null,
         null
       ],
-      "/Users/armanjonvillalobos/Projects/rails_studio/flix/app/controllers/sessions_controller.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        9,
-        8,
-        8,
-        8,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
       "/Users/armanjonvillalobos/Projects/rails_studio/flix/app/models/review.rb": [
         1,
         1,
@@ -1119,6 +1119,6 @@
         null
       ]
     },
-    "timestamp": 1453039895
+    "timestamp": 1453040569
   }
 }
