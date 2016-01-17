@@ -17,4 +17,5 @@
 /tmp
 
 # Ignore test coverage files
-/coverage/*
+/coverage
+/coverage.data
