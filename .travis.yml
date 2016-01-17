@@ -1,0 +1,7 @@
+language: ruby
+script: "bundle exec rake"
+gemfile:
+  - Gemfile
+branches:
+  only:
+    - master
