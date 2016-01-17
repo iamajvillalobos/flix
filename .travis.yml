@@ -5,3 +5,6 @@ gemfile:
 branches:
   only:
     - master
+addons:
+    code_climate:
+        repo_token: 173718ccc96a48095e94592daff2740ca81e6edad67e364ac772a42f9a186637
