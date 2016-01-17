@@ -6,7 +6,8 @@ class SessionsController < ApplicationController
     if user = User.authenticate(params[:username_email], params[:password])
       session[:user_id] = user.id
       flash[:notice] = "Welcome back, #{user.name}"
-      redirect_to user_path(user)
+      redirect_to (session[:intented_url] || user)
+      session[:intented_url] = nil
     else
       flash.now[:alert] = "Invalid credentials combination"
       render :new
