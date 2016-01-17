@@ -15,7 +15,3 @@
 /log/*
 !/log/.keep
 /tmp
-
-# Ignore test coverage files
-/coverage
-/coverage.data
