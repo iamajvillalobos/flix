@@ -8,7 +8,7 @@ describe "Viewing a list of reviews" do
   it "shows the reviews for a specific movie" do
     movie1 = Movie.create(movie_attributes(title: "Iron Man"))
     review1 = movie1.reviews.create(review_attributes(comment: "Love it!", user: @user))
-    review2 = movie1.reviews.create(review_attributes(name: "Looking for the sequel", user: @user))
+    review2 = movie1.reviews.create(review_attributes(comment: "Looking for the sequel", user: @user))
 
     movie2 = Movie.create(movie_attributes(title: "Superman"))
     review3 = movie2.reviews.create(review_attributes(comment: "More power!", user: @user))
